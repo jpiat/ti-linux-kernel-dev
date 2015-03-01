@@ -1,0 +1,32 @@
+From 78281ebc11317d785c42dcc2f44c405845f15af1 Mon Sep 17 00:00:00 2001
+From: Jonathan Piat <piat.jonathan@gmail.com>
+Date: Sun, 7 Dec 2014 15:54:04 +0100
+Subject: [PATCH 4/4] adding logibone to kernel drivers
+
+---
+ drivers/misc/cape/beaglebone/Kconfig  | 2 ++
+ drivers/misc/cape/beaglebone/Makefile | 1 +
+ 2 files changed, 3 insertions(+)
+
+diff --git a/drivers/misc/cape/beaglebone/Kconfig b/drivers/misc/cape/beaglebone/Kconfig
+index eeb6782..888b646 100644
+--- a/drivers/misc/cape/beaglebone/Kconfig
++++ b/drivers/misc/cape/beaglebone/Kconfig
+@@ -8,3 +8,5 @@ config BEAGLEBONE_PINMUX_HELPER
+ 	default n
+ 	help
+ 	  Say Y here to include support for the pinmux helper
++
++source "drivers/misc/cape/beaglebone/logibone/Kconfig"
+diff --git a/drivers/misc/cape/beaglebone/Makefile b/drivers/misc/cape/beaglebone/Makefile
+index 7f4617a..380460b 100644
+--- a/drivers/misc/cape/beaglebone/Makefile
++++ b/drivers/misc/cape/beaglebone/Makefile
+@@ -3,3 +3,4 @@
+ #
+ 
+ obj-$(CONFIG_BEAGLEBONE_PINMUX_HELPER)	+= bone-pinmux-helper.o
++obj-y					+= logibone/
+-- 
+1.9.1
+

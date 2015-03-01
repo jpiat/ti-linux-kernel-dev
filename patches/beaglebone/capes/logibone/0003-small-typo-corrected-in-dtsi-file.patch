@@ -1,0 +1,43 @@
+From 4ed4bb9657659aa9662fb638ec3e8da3f252251e Mon Sep 17 00:00:00 2001
+From: Jonathan Piat <piat.jonathan@gmail.com>
+Date: Sun, 7 Dec 2014 15:51:10 +0100
+Subject: [PATCH 3/4] small tyo corrected in dtsi file
+
+---
+ arch/arm/boot/dts/am335x-bone-logibone-r1.dts  | 2 +-
+ arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-bone-logibone-r1.dts b/arch/arm/boot/dts/am335x-bone-logibone-r1.dts
+index 00cc10a..9c69bd3 100644
+--- a/arch/arm/boot/dts/am335x-bone-logibone-r1.dts
++++ b/arch/arm/boot/dts/am335x-bone-logibone-r1.dts
+@@ -44,4 +44,4 @@
+ };
+ 
+ #include "am335x-bone-i2c2-cape-eeprom.dtsi"
+-#include "am335x-bone-logibone.dtsi"
++#include "am335x-bone-logibone-r1.dtsi"
+diff --git a/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi b/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi
+index 1432d19..340af17 100644
+--- a/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi
++++ b/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi
+@@ -92,7 +92,7 @@
+ };
+ 
+ 
+-&am33xx_pinmux>{
++&am33xx_pinmux{
+ 		gpmc_pins: pinmux_gpmc_pins {
+ 			pinctrl-single,pins = <
+ 				0x000 0x30	/* gpmc_ad0.gpmc_ad0 MODE0 | INPUT | PULLUP */
+@@ -171,5 +171,5 @@
+ 	};
+ 	};
+ 
+-#include "aam335x-bone-spi1-spidev.dtsi"
++#include "am335x-bone-spi1-spidev.dtsi"
+ #include "am335x-boneblack-nxp-hdmi-no-audio.dtsi"
+-- 
+1.9.1
+

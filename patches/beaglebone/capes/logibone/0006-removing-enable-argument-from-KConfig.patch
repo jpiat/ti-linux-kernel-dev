@@ -1,0 +1,24 @@
+From a1f9668ed05547e12505cf31a60a308fc5e6509a Mon Sep 17 00:00:00 2001
+From: Jonathan Piat <piat.jonathan@gmail.com>
+Date: Sun, 7 Dec 2014 16:52:17 +0100
+Subject: [PATCH] removing enable argument from KConfig
+
+---
+ drivers/misc/cape/beaglebone/logibone/Kconfig | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/drivers/misc/cape/beaglebone/logibone/Kconfig b/drivers/misc/cape/beaglebone/logibone/Kconfig
+index 2d2e891..b8cf6d2 100644
+--- a/drivers/misc/cape/beaglebone/logibone/Kconfig
++++ b/drivers/misc/cape/beaglebone/logibone/Kconfig
+@@ -1,6 +1,5 @@
+ config CAPE_LOGIBONE_R1
+ 	tristate "Beaglebone Logibone Cape"
+-	depends on CAPE_BEAGLEBONE
+ 	default n
+ 	help
+-	  Say Y here to include support for the Nixie Cape
++	  Say Y here to include support for the LOGI-Bone cape
+-- 
+1.9.1
+
