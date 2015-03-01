@@ -665,6 +665,13 @@ beaglebone () {
 
 	echo "dir: beaglebone/phy"
 	${git} "${DIR}/patches/beaglebone/phy/0001-cpsw-search-for-phy.patch"
+
+        echo "dir: beaglebone/capes/logibone"
+        ${git} "${DIR}/patches/beaglebone/capes/logibone/0001-enabling-logibone-support-on-beaglebone.patch"
+        ${git} "${DIR}/patches/beaglebone/capes/logibone/0002-Adding-LOGI-Bone-R1-to-cape-list.patch"
+        ${git} "${DIR}/patches/beaglebone/capes/logibone/0003-small-typo-corrected-in-dtsi-file.patch"
+        ${git} "${DIR}/patches/beaglebone/capes/logibone/0004-adding-logibone-to-kernel-drivers.patch"
+        ${git} "${DIR}/patches/beaglebone/capes/logibone/0005-adding-logibone-driver-code.patch"
 }
 
 sgx () {
