@@ -138,7 +138,7 @@ index 0000000..1432d19
 +	};
 +	P8_07_pinmux {
 +		status = "disabled";
-+	};	
++	};
 +	P8_08_pinmux {
 +		status = "disabled";
 +	};
@@ -147,12 +147,12 @@ index 0000000..1432d19
 +	};
 +	P8_09_pinmux {
 +		status = "disabled";
-+	};	
++	};
 +	P9_12_pinmux {
 +		status = "disabled";
 +	};
 +};
-+	
++
 +
 +&i2c2 {
 +	pca9534@24 {
@@ -244,6 +244,6 @@ index 0000000..1432d19
 +
 +#include "aam335x-bone-spi1-spidev.dtsi"
 +#include "am335x-boneblack-nxp-hdmi-no-audio.dtsi"
--- 
+--
 1.9.1
 

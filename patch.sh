@@ -672,6 +672,10 @@ beaglebone () {
         ${git} "${DIR}/patches/beaglebone/capes/logibone/0003-small-typo-corrected-in-dtsi-file.patch"
         ${git} "${DIR}/patches/beaglebone/capes/logibone/0004-adding-logibone-to-kernel-drivers.patch"
         ${git} "${DIR}/patches/beaglebone/capes/logibone/0005-adding-logibone-driver-code.patch"
+	#${git} "${DIR}/patches/beaglebone/capes/logibone/0006-removing-enable-argument-from-KConfig.patch"
+	${git} "${DIR}/patches/beaglebone/capes/logibone/0007-Enabling-boneblack-support-for-logibone.patch"
+	${git} "${DIR}/patches/beaglebone/capes/logibone/0008-Making-change-on-logibone-beaglebone-black-patch-to-.patch"
+	${git} "${DIR}/patches/beaglebone/capes/logibone/0001-Corrected-mistake-in-BBB-support.patch"
 }
 
 sgx () {
