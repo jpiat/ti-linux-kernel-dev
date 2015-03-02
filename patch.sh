@@ -675,7 +675,8 @@ beaglebone () {
 	#${git} "${DIR}/patches/beaglebone/capes/logibone/0006-removing-enable-argument-from-KConfig.patch"
 	${git} "${DIR}/patches/beaglebone/capes/logibone/0007-Enabling-boneblack-support-for-logibone.patch"
 	${git} "${DIR}/patches/beaglebone/capes/logibone/0008-Making-change-on-logibone-beaglebone-black-patch-to-.patch"
-	${git} "${DIR}/patches/beaglebone/capes/logibone/0001-Corrected-mistake-in-BBB-support.patch"
+	${git} "${DIR}/patches/beaglebone/capes/logibone/0009-Corrected-mistake-in-BBB-support.patch"
+	${git} "${DIR}/patches/beaglebone/capes/logibone/0010-Changed-i2c-bus-to-1.patch"
 }
 
 sgx () {

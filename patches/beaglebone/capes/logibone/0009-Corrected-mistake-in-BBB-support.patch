@@ -1,0 +1,29 @@
+From e3d23eccd77f72d83df5593abb5ab2a403e9537b Mon Sep 17 00:00:00 2001
+From: Jonathan Piat <piat.jonathan@gmail.com>
+Date: Mon, 2 Mar 2015 01:02:24 +0100
+Subject: [PATCH] Corrected mistake in BBB support
+
+---
+ arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts |    6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts b/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts
+index 705ee72..0671980 100644
+--- a/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts
++++ b/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts
+@@ -4,12 +4,6 @@
+ #include "am335x-bone-common.dtsi"
+ #include "am335x-bone-common-pinmux.dtsi"
+ 
+-/dts-v1/;
+-
+-#include "am33xx.dtsi"
+-#include "am335x-bone-common.dtsi"
+-#include "am335x-bone-common-pinmux.dtsi"
+-
+ / {
+ 	model = "TI AM335x BeagleBone Black";
+ 	compatible = "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
+-- 
+1.7.9.5
+

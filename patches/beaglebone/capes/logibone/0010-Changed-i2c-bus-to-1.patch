@@ -1,0 +1,31 @@
+From 2281ff4b12ed9bfa95674ea45b12f4d5eb39ecc4 Mon Sep 17 00:00:00 2001
+From: Jonathan Piat <piat.jonathan@gmail.com>
+Date: Mon, 2 Mar 2015 01:08:59 +0100
+Subject: [PATCH] Changed i2c bus to 1
+
+---
+ arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi |    8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi b/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi
+index 5869f5e..6807ca8 100644
+--- a/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi
++++ b/arch/arm/boot/dts/am335x-bone-logibone-r1.dtsi
+@@ -83,7 +83,13 @@
+ };
+ 
+ 
+-&i2c2 {
++&i2c1 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c1_pins>;
++
++	status = "okay";
++	clock-frequency = <100000>;
++
+ 	pca9534@24 {
+ 		compatible = "pca9534";
+ 		reg = <0x24>;
+-- 
+1.7.9.5
+

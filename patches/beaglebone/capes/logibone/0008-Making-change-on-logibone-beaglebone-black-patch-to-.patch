@@ -1,0 +1,62 @@
+From da929db201bde519298c047ceae241e76f43150c Mon Sep 17 00:00:00 2001
+From: Jonathan Piat <piat.jonathan@gmail.com>
+Date: Mon, 2 Mar 2015 00:20:14 +0100
+Subject: [PATCH] Making change on logibone beaglebone black patch to try get
+ it to boot ...
+
+---
+ arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts |   18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+
+diff --git a/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts b/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts
+index 278d032..705ee72 100644
+--- a/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts
++++ b/arch/arm/boot/dts/am335x-boneblack-logibone-r1.dts
+@@ -4,6 +4,12 @@
+ #include "am335x-bone-common.dtsi"
+ #include "am335x-bone-common-pinmux.dtsi"
+ 
++/dts-v1/;
++
++#include "am33xx.dtsi"
++#include "am335x-bone-common.dtsi"
++#include "am335x-bone-common-pinmux.dtsi"
++
+ / {
+ 	model = "TI AM335x BeagleBone Black";
+ 	compatible = "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
+@@ -11,7 +17,7 @@
+ 
+ &ldo3_reg {
+ 	regulator-min-microvolt = <1800000>;
+-	regulator-max-microvolt = <3300000>;
++	regulator-max-microvolt = <1800000>;
+ 	regulator-always-on;
+ };
+ 
+@@ -27,7 +33,7 @@
+ };
+ 
+ &mmc1 {
+-	vmmc-supply = <&ldo3_reg>;
++	vmmc-supply = <&vmmcsd_fixed>;
+ };
+ 
+ &am33xx_pinmux {
+@@ -35,13 +41,5 @@
+ 	pinctrl-0 = <&clkout2_pin>;
+ };
+ 
+-&sham {
+-	status = "okay";
+-};
+-
+-&aes {
+-	status = "okay";
+-};
+-
+ #include "am335x-bone-i2c2-cape-eeprom.dtsi"
+ #include "am335x-bone-logibone-r1.dtsi"
+-- 
+1.7.9.5
+
